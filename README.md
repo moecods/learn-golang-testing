@@ -20,3 +20,6 @@ The `*testing.T` type provides methods like `Error`, `Errorf`, `Fatal`, `Fatalf`
 - Error: Marks the test as failed but continues execution.
 - Fatal: Marks the test as failed and stops execution immediately.
 ***
+I write Table Driven Test for Add function in meth_test
+table-driven test are a pattern used in Go to test multiple scenarios with diffrent inputs and expected outputs.
+***

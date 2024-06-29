@@ -12,7 +12,12 @@ the `testing` package in Go provides the tools necessary to write unit tests.
 for first try first i create math file and Add func
 Add func get two int value and return sum and return sum of them
 i created a file test with name math_test (math + _test)
-i write test for Add func after that for running my test i run statement go test
+i write test for Add func after that for running my test i run statement go test**
+***
+you can run test by run below statement:
+```
+go test
+```
 ***
 
 The `*testing.T` type provides methods like `Error`, `Errorf`, `Fatal`, `Fatalf` Witch are used to report failture during a test.
@@ -23,3 +28,5 @@ The `*testing.T` type provides methods like `Error`, `Errorf`, `Fatal`, `Fatalf`
 I write Table Driven Test for Add function in meth_test
 table-driven test are a pattern used in Go to test multiple scenarios with diffrent inputs and expected outputs.
 ***
+check coverage: go test -cover
+run the benchmark: go test -bench=.

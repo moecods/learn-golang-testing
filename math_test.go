@@ -34,6 +34,32 @@ func TestAddNew(t *testing.T) {
     }
 }
 
+func TestAddSubtests(t *testing.T) {
+	tests := []struct {
+		name string
+		a, b int
+		expected int
+	}{
+        {"Positive numbers", 2, 3, 5},
+        {"Negative numbers", -2, -3, -5},
+        {"Mixed numbers", -2, 3, 1},
+        {"Zeros", 0, 0, 0},
+	}
+
+	for _, tt := range tests {
+        tt := tt // capture range variable
+
+		// create subtest for each case
+        t.Run(tt.name, func(t *testing.T) {
+            result := Add(tt.a, tt.b)
+            if result != tt.expected {
+                t.Errorf("Add(%d, %d) = %d; want %d", tt.a, tt.b, result, tt.expected)
+            }
+        })
+    }
+}
+
+
 func BenchmarkAdd(b *testing.B) {
     for i := 0; i < b.N; i++ {
         Add(2, 3)
